@@ -149,7 +149,15 @@ if there is a new feature to be added to the working application its usually ide
 [DevOps & GitHub Projects Based Course](https://www.udemy.com/share/103WWq3@OJwpydIEYMZJL15MN18LxGLLV-Wfd6LI-cUUq7G6uCHllljr0TtrKQWT5e8Awq97/)
 
 ### What I Liked about the course:
-was a one stop shop project based course from begginer to advanced level that covers different project from on premises infrastructure to cloud and managing codes using github and CI/CD pipelines as well. I had gone through the main course it self before going through the project based course  to get more handson on complex K8S deployments and other system architecting concepts. 
+was a one stop shop project based course from begginer to advanced level that covers different project from on premises infrastructure to cloud and managing codes using github and CI/CD pipelines as well. I had gone through the main course it self before going through the project based course  to get more handson on complex K8S deployments and other system architecting concepts. other interesting concepts from the course
+
+`Ansible`
+`Docker`
+`Jenkins`
+`AWS`
+`Terraform`
+
+### developed good systems architecting skills, troubleshooting and automation concepts as well.
 
 
 
