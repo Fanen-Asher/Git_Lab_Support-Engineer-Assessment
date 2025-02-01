@@ -126,10 +126,11 @@ This is required to build new features for a working app without making changes 
 
 ***git commit -m*** "what has been added or change?": this commits to the main working directory which can also be seen as the most recent code for the working application.
 
+<br>
 
 ![checkimage](./Images/git_describe.png)
 
-<br>
+
 
 ### New feature to working Application:
 if there is a new feature to be added to the working application its usually ideal to run a stage or test of the the new feature before merging to the working application code we can use below command to checkout the Feature app
