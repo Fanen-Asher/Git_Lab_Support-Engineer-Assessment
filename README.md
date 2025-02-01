@@ -50,7 +50,7 @@ The merge is represented by the |\ and |/ lines in the graph.
 HEAD points to the main branch, and the most recent commit on main is **3ceaba9**.
 
 ## Extra Note: 
-This graph is a common way to visualize Git history, especially when branches and merges are involved.
+This graph is a common way to visualize Git history, especially when branches and merges are involved. and the above looks more of a ***squash*** merge process that was done after the initial commit process
 
 ## Reference:
 [Udemy DevOpsCourse](https://www.udemy.com/share/103Coy3@mQdw4r9Fl7n1-g6tG016ppTM1xucVl3vAhokOJqTG9lq1Kmk23im9eftklNezU5B/)
@@ -138,13 +138,16 @@ if there is a new feature to be added to the working application its usually ide
 
 ***git merge FeatureA*** this now merges the changes from the featureA branch to the Main branch. you can run a ***git log --all*** to see all the commits
 
+### Extra information:
+The above process could also be a ***fast forward merge*** process or ***squash merge*** process depending on the changes to be made at different points in time and when they are merged to the main or master branch
+
 # Question 4
 
 ## What is a technical book/blog/course/etc. you experienced recently or in the past that you enjoyed?  Please include:
  - A link or reference so we know what you are talking about.
  - A brief review of what you especially liked or didn’t like about it.
 
-### Was more of a DevOps & GitHub Project based course that I went through on Udemy with below link: very interesting course and one of the best project based course I have seen on DevOps based projects.
+### The technical course was more of a DevOps & GitHub Project based course that I went through on Udemy with below link: very interesting course and one of the best project based course I have seen on DevOps based projects.
 
 [DevOps & GitHub Projects Based Course](https://www.udemy.com/share/103WWq3@OJwpydIEYMZJL15MN18LxGLLV-Wfd6LI-cUUq7G6uCHllljr0TtrKQWT5e8Awq97/)
 
@@ -155,9 +158,57 @@ was a one stop shop project based course from begginer to advanced level that co
 `Docker`
 `Jenkins`
 `AWS`
-`Terraform`
+`Terraform` 
+`linux`
 
-### developed good systems architecting skills, troubleshooting and automation concepts as well.
+### Overall I developed good systems architecting skills, troubleshooting and automation concepts as well.
+
+# Question 5
+## Write a Ruby or Bash script that will print usernames of all users on a Linux system together with their home directories. Here's some example output:
+
+   ```
+   gitlab:/home/gitlab
+   nobody:/nonexistent
+   .
+   .
+   ```
+   
+   Each line is a concatenation of a username, the colon
+   character (`:`), and the home directory path for that username. Your script
+   should output such a line for each user on the system.
+   
+   Next, write a second script that:
+
+   * Takes the full output of your first script and converts it to an MD5 hash.
+   * On its first run stores the MD5 checksum into the `/var/log/current_users` file.
+   * On subsequent runs, if the MD5 checksum changes, the script should add a line in
+     the `/var/log/user_changes` file with the message,
+     `DATE TIME changes occurred`, replacing `DATE` and `TIME` with appropriate
+     values, and replaces the old MD5 checksum in `/var/log/current_users`
+     file with the new MD5 checksum.
+
+   Finally, write a crontab entry that runs these scripts hourly.
+
+   Provide both scripts and the crontab entry for the answer to be
+   complete.
+
+## Answer to above: Using Bash
+
+### First Script 1: list_users.sh
+
+This script lists all users and their home directories.
+
+`#!/bin/bash`
+
+*Loop through all users and print their username and home directory*
+
+`getent passwd | awk -F: '{print $1 ":" $6}'`
+
+### Second script: monitor_users.sh
+
+*this script calculates the MD5 hash of the output from list_users.sh, compares it with the previous hash stored in /var/log/current_users, and logs changes if detected.*
+
+
 
 
 
