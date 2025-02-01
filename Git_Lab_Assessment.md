@@ -232,6 +232,10 @@ This script lists all users and their home directories.
 
 *This setup will monitor user changes hourly and log them if any changes are detected.*
 
+## Reference:
+
+[Linux & Bash Scripting Course](https://www.udemy.com/share/101svy3@Zj59dtefhQfF4MTevVm8RefhD4vX3vP8JJZJlVzZYoppdfNUWZrvVJftFV7Kwj90/)
+
 
 
 
