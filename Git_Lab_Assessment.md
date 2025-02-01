@@ -124,9 +124,9 @@ This is required to build new features for a working app without making changes 
 
 ***git  add .*** : whenever there is a change or an addition to the working directory you need to add the new code change or directory to the staging the area before commiting to the main branch using below command
 
-***git commit -m*** "***what has been added or change?***": this commits to the main working directory which can also be seen as the most recent code for the working application.
+***git commit -m*** "***what has been added or change?***": this commits to the main working directory which can also be seen as themost recent code for the working application.
 
-<br>
+
 
 ![MergingConcepts](./Images/git_describe.png)
 
