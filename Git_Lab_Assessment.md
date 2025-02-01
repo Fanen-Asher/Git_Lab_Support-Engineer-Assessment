@@ -17,7 +17,7 @@
 ## From the above question, please find my feedback below
 ## Answer:
 
-## The git log graph shows the commit history of a Git repository, including branches and merges. below is a breakdown of the graph:
+## The git log graph shows the commit history of a Git repository, including branches and merges. Below is a breakdown of the different commits shown from the graph:
 
 ## Commit details on git log
 The graph starts with the oldest commit at the bottom and progresses upward to the most recent commit at the top
@@ -30,7 +30,7 @@ The graph starts with the oldest commit at the bottom and progresses upward to t
 
 **572982b** is the third commit, made on the main branch.
 
-**9f22672** is a commit on the feature-branch branch, labeled as "awesome feature."
+**9f22672** is a commit on the feature-branch branch, labeled as "awesome feature." probably done to add a new feature to the working code.
 
 **6b5b81f** is a merge commit that combines changes from feature-branch into main.
 
@@ -63,34 +63,34 @@ This graph is a common way to visualize Git history, especially when branches an
 ## A user is complaining that it's taking a long time to load a page on our web application. In your own words, write down and discuss the possible cause(s) of the slowness. Also describe how you would begin to troubleshoot this issue?
 
 ## Answer Response:
-when a user reports that an application is loading slowly this could be from various factors in the application, server, or database. It's always good to look at the end to end system architecture stack to have a feel of where the issue could be coming from.
+when a user reports that an application is loading slowly this could be from various factors in the application, server, or database. It's always good to look at the end to end system architecture flow stack to have a feel of where the issue could be coming from.
 
 ## Possible system layers the issue could stem from:
 
 ### Database:
-depending on the RDBMs used which could be MySQL, Oracle or MSSQL the possible issues could be **indexing issues** on frequently querried tables, **unoptimized queries** which may take time to execute or in some case lead to DB locks
+depending on the RDBMs used which could be MySQL, Oracle or MSSQL the possible issues could be **indexing issues** on frequently querried tables, **unoptimized queries** which may take time to execute or in some case lead to Database lock.
 
 ### Servers:
 the server may be maxing out of key resources such as RAM and CPU or there could be some external network communication issues when trying to reach some third party APIs that could be slow.
 
 ### Web Application and Web server:
-The web server might not have enough workers or threads to handle concurrent requests or no caching inplace for database communication of stateful request.
+The web server might not have enough workers or threads to handle concurrent requests or no caching inplace for database communication or stateful request.
 
 ### External dependencies:
-Third party APIs could be slow or i some cases DNS resolution problems.
+Third party APIs could be slow or in some cases DNS resolution problems.
 
 ### Troubleshooting Steps
 
-Comfirm the experience: accessing the page yourself and also check is issue is consistent or intermittent as this could guide on what to check next
+Comfirm the experience: accessing the page yourself and also check if issue is consistent or intermittent as this could guide on what to check next
 
 ### Check Server performance:
-can use monitoring tools such as BM truesight or AppDynamics to check server resource utilization or even log on to the server box and run commands such as **top**, **vmstats**, **df -h** to check memory, storage or CPU utilization
+can use available monitoring tools such as BMC truesight or AppDynamics to check server resource utilization or even log on to the server box and run commands such as **top**, **vmstats**, **df -h** to check memory, storage or CPU utilization metrics
 
 ### Web service:
 can also check web server(IIS, Apache, Nginx etc) logs to see possible trace of transactions and destinations
 
 ### database:
-check long running queries and see if their are possible optimization and even kill some queries so that they can be re-initiated. eg SHOW PROCESSLIST on MySQL or other commands for different databases.
+check long running queries and see if there are possible optimization to be done and if possible you may need to kill some long running queries so that they can be re-initiated. eg SHOW PROCESSLIST on MySQL or other commands for different databases can show long running queries or sessions on the database.
 
 ### Web Application:
 possible profiling of the application using the MVC framework
@@ -99,7 +99,7 @@ possible profiling of the application using the MVC framework
 use commands such as curl or telnet to check reachability of external endpoints 
 
 ### Redesign possibility
-If there is a likelihold of an increase in the request hitting the system from the usual trend then the system architecture needs to be reviewed. Load balancing the request across multipl web server and application servers to handle effiencient processing of request.
+If there is a likelihold of an increase in the request or number of transactions hitting the system from the usual trend then the system architecture needs to be reviewed. Load balancing the request across multipl web server and application servers to handle effiencient processing of request and if possible carry out some scale out of the DB on different servers.
 
 ## Reference:
 
@@ -109,7 +109,7 @@ If there is a likelihold of an increase in the request hitting the system from t
 ## In your own words, write a tutorial/blog explaining things in a beginner-friendly way. Make sure to address both the "why" and "how" for each Git command you use.  Assume the audience are readers of a well known blog.
 
 ### Theory about Brancing in Git:
-the whole idea of using a branch is for better management of building new features before mearging to production. in other ways these features can be better tested before merging to the Mainor Master branch. before we go into the details lets try to understand the differences of Main and feature branch.
+the whole idea of using a branch is for better management or building new features before mearging to production working codes. in other ways these features can be better tested before merging to the Main or Master branch. Before we go into the details lets try to understand the differences of Main and feature branch.
 
 ### Main or Master Branch: 
 this is usually the working code of the application in production after the working directory is initialized and the code is added and commited to the working directory and any changes to the code in this directory will alter the functionality of the working aplication.
@@ -120,9 +120,9 @@ This is required to build new features for a working app without making changes 
 ### Git commands before branching:
 
 ### creating and initializing a git directory:
-***git init***: ussed to initialize a working directory in git. initializing helps to manages the changes to the code in the directory.
+***git init***: ussed to initialize a working directory in git. initializing helps to manages the changes to the code in the git database.
 
-***git  add .*** : whenever there is a change or an addition to the working directory you need to add the new code change or directory to the staging the area before commiting to the main branch using below command
+***git  add .*** : whenever there is a change or an addition to the working directory you need to add the new code change or directory to the staging area before commiting to the main branch using below command
 
 ***git commit -m*** "***what has been added or change?***": this commits to the main working directory which can also be seen as themost recent code for the working application.
 
@@ -133,14 +133,14 @@ This is required to build new features for a working app without making changes 
 
 
 ### New feature to working Application:
-if there is a new feature to be added to the working application its usually ideal to run a stage or test of the the new feature before merging to the working application code we can use below command to checkout the Feature app
+if there is a new feature to be added to the working application its usually ideal to run a stage or test of the the new feature before merging to the working application. We can use below command to checkout the Feature app
 
 
-***git checkout -b FeatureA*** this will check out the code from the main branch and present to the user some sort of a branch to make updates from without impacting the working code you can make update and the do a commit to ensure persistence to the branch. once you are satisfied with the changes from the FeatureA branch and now want to merge the new feature to the working Application code the you can check out the Main or Master branch using below command and then merge the featureA branch from the Main branch
+***git checkout -b FeatureA*** this will check out the code from the main branch and present to the user some sort of a branch to make updates from without impacting the working code you can make update and do a commit to ensure persistence to the branch. once you are satisfied with the changes from the FeatureA branch and now want to merge the new feature to the working Application code the you can check out the Main or Master branch using below command and then merge the featureA branch from the Main branch
 
 ***git checkout Main*** after checout to the Main or Master branch then you can merge the changes to the working application from the FeatureA branch using below command
 
-***git merge FeatureA*** this now merges the changes from the featureA branch to the Main branch. you can run a ***git log --all*** to see all the commits
+***git merge FeatureA*** this now merges the changes from the featureA branch to the Main branch. you can run a ***git log --all*** to see all the commits and unique IDs or even a ***git log --graph*** command can be used
 
 ### Extra information:
 The above process could also be a ***fast forward merge*** process or ***squash merge*** process depending on the changes to be made at different points in time and when they are merged to the main or master branch
@@ -156,7 +156,7 @@ The above process could also be a ***fast forward merge*** process or ***squash 
 [DevOps & GitHub Projects Based Course](https://www.udemy.com/share/103WWq3@OJwpydIEYMZJL15MN18LxGLLV-Wfd6LI-cUUq7G6uCHllljr0TtrKQWT5e8Awq97/)
 
 ### What I Liked about the course:
-was a one stop shop project based course from begginer to advanced level that covers different project from on premises infrastructure to cloud and managing codes using github and CI/CD pipelines as well. I had gone through the main course it self before going through the project based course  to get more handson on complex K8S deployments and other system architecting concepts. other interesting concepts from the course
+It was a one stop shop project based course from begginer to advanced level that covers different project from on-premises infrastructure to cloud and managing codes using github and CI/CD pipelines as well. I had gone through the main course it self before going through the project based course  to get more handson on complex K8S deployments and other system architecting concepts. other interesting concepts from the course
 
 `Ansible`
 `Docker`
