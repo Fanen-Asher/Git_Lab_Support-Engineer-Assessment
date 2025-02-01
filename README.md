@@ -208,6 +208,32 @@ This script lists all users and their home directories.
 
 *this script calculates the MD5 hash of the output from list_users.sh, compares it with the previous hash stored in /var/log/current_users, and logs changes if detected.*
 
+![secondscript](images\secondscript.png)
+
+### Crontab Entry:
+*Add the following line to your crontab to run the scripts hourly*:
+
+`0 * * * * /path/to/list_users.sh | /path/to/monitor_users.sh`
+
+*Replace /path/to/ with the actual paths to your scripts.*
+
+### Steps to Set Up:
+
+1. Save ***list_users.sh*** and ***monitor_users.sh*** to your desired directory.
+   
+2. Make both scripts executable:
+   
+   `chmod +x /path/to/list_users.sh`
+
+   `chmod +x /path/to/monitor_users.sh`
+
+3. Add the crontab entry using `crontab -e`.
+4. Ensure the `/var/log/` directory is writable by the user running the script, or adjust the file paths as needed.
+
+*This setup will monitor user changes hourly and log them if any changes are detected.*
+
+
+
 
 
 
