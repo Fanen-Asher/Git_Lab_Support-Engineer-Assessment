@@ -126,7 +126,6 @@ This is required to build new features for a working app without making changes 
 
 ***git commit -m*** "what has been added or change?": this commits to the main working directory which can also be seen as the most recent code for the working application.
 
-<br>
 
 ![checkimage](./Images/git_describe.png)
 
