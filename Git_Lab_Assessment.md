@@ -208,8 +208,14 @@ This script lists all users and their home directories.
 
 *this script calculates the MD5 hash of the output from list_users.sh, compares it with the previous hash stored in /var/log/current_users, and logs changes if detected.*
 
-![secondscript](/Images/secondscript.png)
+![alt text](Images/git_describe.png)
 
+
+<br>
+
+![secondscript](./Images/secondscript.png)
+
+<br>
 ### Crontab Entry:
 *Add the following line to your crontab to run the scripts hourly*:
 
