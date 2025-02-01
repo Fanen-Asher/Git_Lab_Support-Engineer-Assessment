@@ -128,7 +128,7 @@ This is required to build new features for a working app without making changes 
 
 
 
-![MergingConcepts](./Images/git_describe.png)
+![MergingConcepts](./Images/gitdescribe.png)
 
 
 
