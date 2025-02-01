@@ -215,7 +215,7 @@ This script lists all users and their home directories.
 
 ![secondscript](./Images/secondscript.png)
 
-<br>
+
 ### Crontab Entry:
 *Add the following line to your crontab to run the scripts hourly*:
 
